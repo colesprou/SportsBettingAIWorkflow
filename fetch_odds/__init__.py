@@ -1,11 +1,16 @@
 import logging
-import os
-from datetime import datetime
-import pandas as pd
-from sqlalchemy import create_engine
-from fetch_and_store_mlb_props import fetch_game_data, insert_data, get_todays_game_ids
-from betting_functions import fetch_sports_markets
-import azure.functions as func
+
+try:
+    import os
+    from datetime import datetime
+    import pandas as pd
+    from sqlalchemy import create_engine
+    from fetch_and_store_mlb_props import fetch_game_data, insert_data, get_todays_game_ids
+    from betting_functions import fetch_sports_markets
+    import azure.functions as func
+except Exception as e:
+    logging.error(f"❌ Import error on cold start: {e}")
+    raise
 
 def main(mytimer: func.TimerRequest) -> None:
     logging.info("⏰ Azure Function triggered")
