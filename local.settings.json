@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "ODDSJAM_API_KEY": "540d8b29-e704-403d-9926-363d3d7fcaff",
+    "PG_CONN": "postgresql+psycopg2://sb_user:Barleysmu22!@localhost:5432/sb_data"
+  }
+}
